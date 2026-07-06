@@ -213,6 +213,7 @@ class MediaActions @Inject constructor() {
     }
 
     private class TakePhotoAction : Action {
+        override val name: String = "TAKE_PHOTO"
         override suspend fun execute(params: Map<String, String>, context: Context): ActionResult {
             val camera = params["camera"] ?: "back"
             return try {
